@@ -6,4 +6,6 @@
     <string name="button">Button</string>
     <string name="logo">TODO</string>
     <string name="login">TODO</string>
+    <string name="sign_in">Sign In</string>
+    <string name="string_sign_in">signin</string>
 </resources>
