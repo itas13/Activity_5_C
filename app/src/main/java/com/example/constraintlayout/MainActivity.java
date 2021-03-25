@@ -55,6 +55,14 @@ public class MainActivity extends AppCompatActivity {
                     t = Toast.makeText(getApplicationContext(),
                             "Login sukses", Toast.LENGTH_LONG);
                     t.show();
+
+                    Bundle b = new Bundle();
+                    b.putString("a", email.trim());
+                    b.putString("b", password.trim());
+                    Intent i = new Intent(getApplicationContext(), ActivityHasil.class);
+                    i.putExtras(b);
+                    startActivity(i);
+
                 } else if (!nama.equals(email) && password.equals(pass)) {
                     t = Toast.makeText(getApplicationContext(),
                             "Email salah", Toast.LENGTH_LONG);
@@ -63,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
                     t = Toast.makeText(getApplicationContext(),
                             "password salah", Toast.LENGTH_LONG);
                     t.show();
+
                 } else {
                     t = Toast.makeText(getApplicationContext(),
                             "Email dan Password salah", Toast.LENGTH_LONG);
