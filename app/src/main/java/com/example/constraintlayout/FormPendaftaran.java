@@ -17,13 +17,20 @@ public class FormPendaftaran extends AppCompatActivity {
     EditText edtNama, edtAlamat, edtEmail, edtPassword, edtrepass;
 
     //Dekalrasi variabel dengan tipe data Floating Action Button
-    FloatingActionButton Fab;
+    FloatingActionButton fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form_pendaftaran);
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fabSimpan);
+
+        edtNama = findViewById(R.id.edNama);
+        edtAlamat = findViewById(R.id.edAlamat);
+        edtEmail = findViewById(R.id.edEmail);
+        edtPassword = findViewById(R.id.edPassword);
+        edtrepass = findViewById(R.id.edrepas);
+        fab = findViewById(R.id.fabSimpan);
+
         fab.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View View){
